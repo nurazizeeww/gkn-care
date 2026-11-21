@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gema Kebaikan Nusantara (GKN Care)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{colors:{esp:'#4A2C18',brown:'#6F4224',car:'#B4653A',tan:'#C68B59',gold:'#E6C29F',cream:'#FBF6F0'},fontFamily:{sans:['Poppins','sans-serif']}}}}
+</script>
+<style>
+body{background-color:#FBF6F0;background-image:radial-gradient(#e6c29f66 1px,transparent 1.2px);background-size:22px 22px;color:#4A2C18}
+.card{background:#fff;border:1px solid #E6C29F;border-radius:1rem;box-shadow:0 6px 18px rgba(111,66,36,.14)}
+.ttl{font-family:'Playfair Display',serif}
+.orn::after{content:"";display:block;width:70px;height:4px;margin-top:8px;border-radius:9px;background:linear-gradient(90deg,#B4653A,#E6C29F)}
+.nav-a.active{background:#B4653A;color:#fff;box-shadow:0 2px 8px rgba(180,101,58,.5)}
+.bar{width:0;transition:width 1.4s ease}
+.inp{width:100%;border:1px solid #E6C29F;border-radius:.5rem;padding:.5rem .75rem;font-size:.875rem;background:#FBF6F0}
+.inp:focus{outline:2px solid #B4653A}
+th{text-align:left}
+</style>
+</head>
+<body class="font-sans">
+
+<!-- LOGO (SVG). Untuk logo asli: hapus isi <symbol id="logo"> lalu ganti setiap <use> dengan <img src="logo-gkn.png" class="h-10 w-10"> -->
+<svg width="0" height="0" class="absolute"><symbol id="logo" viewBox="0 0 64 64">
+<circle cx="32" cy="32" r="30" fill="#FBF6F0" stroke="#B4653A" stroke-width="3"/>
+<path d="M40 14a18 18 0 1 0 0 30 14 14 0 1 1 0-30z" fill="#6F4224"/>
+<path d="M30 22q8 10 0 20M36 18q13 14 0 28" fill="none" stroke="#E6C29F" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M10 50q6-5 12 0t12 0 12 0 8-2" fill="none" stroke="#B4653A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="14" cy="46" r="2.5" fill="#C68B59"/><circle cx="32" cy="47" r="2" fill="#C68B59"/><circle cx="50" cy="45" r="2.5" fill="#C68B59"/>
+</symbol></svg>
+
+<!-- BANNER WAJIB -->
+<div class="sticky top-0 z-50">
+<div class="bg-gradient-to-r from-esp via-car to-esp text-cream text-center text-[11px] sm:text-sm font-semibold py-2 px-3 tracking-wide">
+SIMULASI – TUGAS KULIAH | Maimunah Nur Azizah (NIM: 24108010033) | Lembaga Filantropi Gema Kebaikan Nusantara (GKN Care)
+</div>
+<header class="bg-cream/95 backdrop-blur border-b-2 border-gold shadow-md">
+<div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+<a href="#" data-go="beranda" class="flex items-center gap-2">
+<img src="logo%20gema%20kebaikan%20nusantara.png" alt="Logo Gema Kebaikan Nusantara" class="h-11 w-auto rounded-md">
+</a>
+<nav id="nav" class="hidden lg:flex gap-1 text-sm font-medium"></nav>
+<button id="burger" class="lg:hidden p-2 rounded-lg border border-gold text-esp" aria-label="Menu">☰</button>
+</div>
+<nav id="mnav" class="hidden px-4 pb-3 grid grid-cols-2 gap-1 text-sm"></nav>
+<nav id="snav" class="lg:hidden flex overflow-x-auto gap-1 px-3 pb-2 text-xs font-medium whitespace-nowrap"></nav>
+</header>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-8">
+
+<!-- ================= BERANDA ================= -->
+<section id="beranda" class="page">
+<div class="grid md:grid-cols-2 gap-8 items-center">
+<div>
+<span class="inline-block bg-gold/60 text-brown border border-tan text-xs font-semibold px-3 py-1 rounded-full">✦ Lembaga Amil Zakat &amp; Filantropi Pemberdayaan</span>
+<h1 class="ttl text-4xl md:text-5xl font-bold mt-4 leading-tight">Gema Kebaikan Nusantara <span class="text-car">(GKN Care)</span></h1>
+<p class="italic text-car mt-2">Menebar Manfaat, Menggemakan Kepedulian untuk Nusantara.</p>
+<p class="mt-4 text-brown/90">GKN Care adalah lembaga filantropi Islam yang mengelola Zakat, Infaq, Sedekah, serta sinergi kerelawanan dan literasi secara transparan dan amanah untuk mendorong kemandirian mustahik di Nusantara.</p>
+<div class="flex flex-wrap gap-3 mt-6">
+<a href="#" data-go="donasi" class="bg-esp text-cream px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-brown transition">Donasi Sekarang</a>
+<a href="#" data-go="laporan" class="border-2 border-car text-car px-6 py-3 rounded-full font-semibold hover:bg-car hover:text-white transition">Lihat Laporan</a>
+</div>
+</div>
+<!-- GAMBAR HERO: ganti <svg> ini dengan <img src="hero.jpg" class="rounded-xl w-full"> -->
+<div class="card p-3 rotate-1 border-2 border-car">
+<img src="gambar%20beranda.jpeg" alt="Gema Kebaikan Nusantara" class="w-full rounded-xl">
+</div>
+</div>
+
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+<div class="card p-4 border-t-4 border-t-car"><div class="text-2xl">💰</div><p class="text-xs text-car mt-1">Total Dana Terhimpun</p><p class="ttl text-xl font-bold">Rp8.000.000</p><p class="text-xs">80% dari target Rp10.000.000</p></div>
+<div class="card p-4 border-t-4 border-t-tan"><div class="text-2xl">📦</div><p class="text-xs text-car mt-1">Total Dana Tersalur</p><p class="ttl text-xl font-bold">Rp6.520.000</p><p class="text-xs">Santunan zakat + sembako infaq</p></div>
+<div class="card p-4 border-t-4 border-t-gold"><div class="text-2xl">⚖️</div><p class="text-xs text-car mt-1">Hak Amil Zakat</p><p class="ttl text-xl font-bold">10%</p><p class="text-xs">Sesuai ketentuan syariah ≤ 12,5%</p></div>
+<div class="card p-4 border-t-4 border-t-brown"><div class="text-2xl">🤝</div><p class="text-xs text-car mt-1">Penerima Manfaat</p><p class="ttl text-xl font-bold">32 Mustahik</p><p class="text-xs">12 zakat &amp; 20 sembako infaq</p></div>
+</div>
+
+<h2 class="ttl text-2xl font-bold mt-12 orn">Program Berjalan</h2>
+<div class="card mt-5 overflow-hidden grid md:grid-cols-5 border-l-8 border-l-car">
+<div class="md:col-span-2 min-h-[12rem]"><img src="program%20berjalan.jpeg" alt="Program Gema Peduli Dhuafa" class="h-full w-full object-cover"></div>
+<div class="md:col-span-3 p-6">
+<span class="text-xs bg-esp text-cream px-3 py-1 rounded-full">Filantropi Uang – Zakat Maal, Infaq &amp; Sedekah</span>
+<h3 class="ttl text-xl font-bold mt-3">Gema Peduli Dhuafa: Paket Sembako Lansia &amp; Santunan Tunai Mustahik</h3>
+<p class="text-sm mt-2 text-brown/90">Santunan tunai Rp360.000/orang untuk 12 mustahik asnaf fakir/miskin dari dana zakat (Rp4.320.000) dan 20 paket sembako @Rp110.000 untuk lansia dhuafa satu RT dari dana infaq/sedekah (Rp2.200.000).</p>
+<p class="text-sm mt-2">📅 Minggu, 22 November 2026 (09.00–11.30 WIB)<br>📍 Balai Warga Baturetno, Banguntapan, Bantul (Simulasi)</p>
+<div class="mt-4 flex justify-between text-sm font-semibold"><span>Rp8.000.000</span><span class="text-car">80% dari Rp10.000.000</span></div>
+<div class="h-3 bg-gold/50 rounded-full mt-1 overflow-hidden"><div class="bar h-full rounded-full bg-gradient-to-r from-car to-tan" data-w="80"></div></div>
+<a href="#" data-go="donasi" class="inline-block mt-4 bg-car text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-esp transition">Ikut Donasi</a>
+</div></div>
+</section>
+
+<!-- ================= PROFIL ================= -->
+<section id="profil" class="page hidden">
+<h2 class="ttl text-3xl font-bold orn">Profil Lembaga</h2>
+<div class="card p-6 mt-5 border-l-8 border-l-tan text-sm leading-relaxed">
+<h3 class="ttl text-lg font-bold mb-2">Tentang Gema Kebaikan Nusantara (GKN Care)</h3>
+Gema Kebaikan Nusantara (GKN) adalah inisiatif lembaga amil zakat dan filantropi berbasis pemberdayaan yang hadir untuk menjembatani kepedulian masyarakat (muzakki dan donatur) dengan kelompok penerima manfaat (mustahik) secara terukur dan transparan. Berangkat dari semangat bahwa kebaikan perlu digemakan secara kolektif, GKN tidak hanya mengelola filantropi berbasis dana (Zakat, Infaq, dan Sedekah), tetapi juga mengintegrasikan Filantropi Tenaga (aksi kerelawanan) dan Filantropi Ilmu (edukasi dan literasi). Seluruh pengelolaan dana dipisahkan secara ketat sesuai akad syariah dengan komitmen pelaporan terbuka kepada publik.
+</div>
+<div class="grid md:grid-cols-2 gap-5 mt-5">
+<div class="card p-6 bg-gradient-to-br from-white to-gold/30 border-t-4 border-t-car"><h3 class="ttl text-xl font-bold">🌙 Visi</h3><p class="mt-2 text-sm italic">"Menjadi lembaga pengelola zakat dan filantropi terpercaya yang mendorong kemandirian masyarakat melalui sinergi harta, tenaga, dan ilmu pengetahuan secara berkelanjutan."</p></div>
+<div class="card p-6 bg-gradient-to-br from-white to-gold/30 border-t-4 border-t-tan"><h3 class="ttl text-xl font-bold">🎯 Misi</h3>
+<ol class="list-decimal ml-5 mt-2 text-sm space-y-1">
+<li>Menghimpun dan mengelola dana zakat, infaq, sedekah, serta kontribusi non-tunai (tenaga dan ilmu) secara amanah, profesional, dan sesuai prinsip syariah.</li>
+<li>Menyediakan sistem pelaporan yang transparan dan akuntabel agar setiap muzakki dan donatur dapat memantau alokasi serta dampak bantuan secara terbuka.</li>
+<li>Menyalurkan program pemberdayaan produktif dan bantuan tepat sasaran untuk meningkatkan taraf ekonomi, pendidikan, dan kesejahteraan mustahik.</li>
+<li>Menggerakkan partisipasi generasi muda dan relawan dalam aksi sosial nyata dan berbagi literasi di tengah masyarakat.</li></ol></div>
+</div>
+<div class="grid sm:grid-cols-3 gap-4 mt-5 text-center">
+<div class="card p-4">🕌<p class="font-semibold">Amanah &amp; Syar'i</p><p class="text-xs">Hak amil maks. 12,5%</p></div>
+<div class="card p-4">🔍<p class="font-semibold">Transparan &amp; Akuntabel</p><p class="text-xs">Laporan terbuka</p></div>
+<div class="card p-4">🌱<p class="font-semibold">Berdampak Berkelanjutan</p><p class="text-xs">Menuju kemandirian</p></div>
+</div>
+<h3 class="ttl text-2xl font-bold mt-10 orn">Struktur Pengurus</h3>
+<!-- FOTO PENGURUS: ganti <div class="foto"> dengan <img src="foto.jpg" class="h-28 w-28 rounded-full object-cover ring-4 ring-car border-4 border-gold"> -->
+<div id="pengurus" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5"></div>
+</section>
+
+<!-- ================= PROGRAM ================= -->
+<section id="program" class="page hidden">
+<h2 class="ttl text-3xl font-bold orn">Program Kami</h2>
+<h3 class="ttl text-xl font-bold mt-5">Program Berjalan</h3>
+<div class="card mt-3 overflow-hidden grid md:grid-cols-5 border-l-8 border-l-car">
+<div class="md:col-span-2 min-h-[12rem]"><img src="program%20berjalan.jpeg" alt="Program Gema Peduli Dhuafa" class="h-full w-full object-cover"></div>
+<div class="md:col-span-3 p-6">
+<span class="text-xs bg-esp text-cream px-3 py-1 rounded-full">Filantropi Uang – Zakat Maal, Infaq &amp; Sedekah</span>
+<h3 class="ttl text-xl font-bold mt-3">Gema Peduli Dhuafa: Paket Sembako Lansia &amp; Santunan Tunai Mustahik</h3>
+<p class="text-sm mt-2 text-brown/90">Santunan tunai Rp360.000/orang untuk 12 mustahik asnaf fakir/miskin dari dana zakat (Rp4.320.000) dan 20 paket sembako @Rp110.000 untuk lansia dhuafa satu RT dari dana infaq/sedekah (Rp2.200.000).</p>
+<p class="text-sm mt-2">📅 Minggu, 22 November 2026 (09.00–11.30 WIB)<br>📍 Balai Warga Baturetno, Banguntapan, Bantul (Simulasi)</p>
+<div class="mt-4 flex justify-between text-sm font-semibold"><span>Rp8.000.000</span><span class="text-car">80% dari Rp10.000.000</span></div>
+<div class="h-3 bg-gold/50 rounded-full mt-1 overflow-hidden"><div class="bar h-full rounded-full bg-gradient-to-r from-car to-tan" data-w="80"></div></div>
+<a href="#" data-go="donasi" class="inline-block mt-4 bg-car text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-esp transition">Ikut Donasi</a>
+</div></div>
+<div class="grid md:grid-cols-3 gap-5 mt-5">
+<div class="card p-5 border-t-4 border-t-car"><div class="text-3xl">💰</div><h3 class="ttl font-bold text-lg mt-2">Filantropi Uang</h3><p class="text-sm mt-1">Zakat, infaq, dan sedekah dengan akad terpisah.</p><span class="inline-block mt-3 text-xs font-semibold bg-esp text-cream px-3 py-1 rounded-full">● Sedang Berjalan</span><p class="text-xs mt-2 text-brown/90">Sedang berjalan melalui program Gema Peduli Dhuafa: santunan tunai 12 mustahik dan 20 paket sembako lansia.</p></div>
+<div class="card p-5 border-t-4 border-t-tan"><div class="text-3xl">🙌</div><h3 class="ttl font-bold text-lg mt-2">Filantropi Tenaga</h3><p class="text-sm mt-1">Relawan membantu pengemasan, pendataan, dan distribusi.</p><span class="inline-block mt-3 text-xs font-semibold bg-esp text-cream px-3 py-1 rounded-full">● Sedang Berjalan</span><p class="text-xs mt-2 text-brown/90">Sedang berjalan: relawan terlibat dalam pengemasan sembako, pendataan mustahik, dan distribusi bantuan.</p></div>
+<div class="card p-5 border-t-4 border-t-gold"><div class="text-3xl">📚</div><h3 class="ttl font-bold text-lg mt-2">Filantropi Ilmu</h3><p class="text-sm mt-1">Literasi keuangan syariah dan edukasi zakat.</p><span class="inline-block mt-3 text-xs font-semibold bg-gold text-esp border border-car px-3 py-1 rounded-full">◔ Proses Perencanaan</span><p class="text-xs mt-2 text-brown/90">Dalam proses perencanaan: kelas literasi keuangan syariah dan edukasi zakat bagi masyarakat.</p></div>
+</div>
+
+<h3 class="ttl text-2xl font-bold mt-10 orn">Daftar Penerima Manfaat</h3>
+<p class="text-xs mt-2 text-brown/80">Nama disamarkan sebagian, tanpa NIK dan alamat lengkap, demi menjaga privasi mustahik. Berikut contoh dari total 32 penerima.</p>
+<div class="card mt-4 overflow-x-auto"><table class="w-full text-sm">
+<thead class="bg-esp text-cream"><tr><th class="p-3">No</th><th class="p-3">Nama</th><th class="p-3">Kategori / Kriteria</th><th class="p-3">Bantuan</th><th class="p-3">Jalur Verifikasi</th></tr></thead>
+<tbody id="penerima" class="divide-y divide-gold"></tbody></table></div>
+</section>
+
+<!-- ================= DONASI ================= -->
+<section id="donasi" class="page hidden">
+<h2 class="ttl text-3xl font-bold orn">Donasi</h2>
+
+<div class="card mt-5 p-5">
+<h3 class="ttl font-bold text-lg">📖 Mengenal Perbedaan Akad</h3>
+<div id="tabs" class="flex gap-2 mt-3 flex-wrap"></div>
+<div id="tabIsi" class="mt-3 bg-gold/30 border border-tan rounded-xl p-4 text-sm leading-relaxed"></div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-5 mt-5">
+<div class="card p-6">
+<p class="font-semibold mb-2">1. Pilih akad</p>
+<div class="flex gap-2 flex-wrap" id="akad"></div>
+<p class="font-semibold mt-4 mb-2">2. Pilih nominal</p>
+<div class="grid grid-cols-3 gap-2" id="nom"></div>
+<input id="custom" type="number" min="1000" placeholder="Nominal lain (Rp)" class="inp mt-3">
+<input id="nama" placeholder="Nama donatur (kosongkan = Hamba Allah)" class="inp mt-3">
+<p class="font-semibold mt-4 mb-2">3. Metode pembayaran</p>
+<div class="grid gap-2" id="metode"></div>
+<button id="kirim" class="w-full mt-4 bg-esp text-cream py-3 rounded-full font-semibold hover:bg-brown transition">Proses Donasi (Simulasi)</button>
+<p id="err" class="text-sm text-red-700 mt-2"></p>
+</div>
+<div class="space-y-5">
+<div class="card p-6 text-center bg-gradient-to-br from-white to-gold/30">
+<h3 class="ttl font-bold text-lg">QRIS GKN Care (Simulasi)</h3>
+<!-- SPACE QRIS: ganti <svg> di bawah dengan <img src="qris-gkn.png" alt="QRIS GKN Care" class="h-40 w-40 mx-auto"> -->
+<img src="qris.jpeg" alt="QRIS GKN Care" class="h-44 w-44 object-contain mx-auto mt-2 border-4 border-car rounded-lg bg-white p-1">
+<p class="text-xs mt-2">Bank Syariah Indonesia (BSI) <b>7000-123-456</b> a.n. GKN Care (simulasi)</p>
+</div>
+<div class="card p-6">
+<h3 class="ttl font-bold text-lg">🧮 Kalkulator Zakat Maal (2,5%)</h3>
+<input id="harta" type="number" placeholder="Total harta tersimpan 1 tahun (Rp)" class="inp mt-2">
+<button id="hitung" class="mt-2 bg-car text-white px-4 py-2 rounded-full text-sm font-semibold">Hitung</button>
+<p id="zk" class="text-sm font-semibold mt-2"></p>
+<p class="text-xs mt-2 text-brown/80">Zakat maal wajib jika harta mencapai nishab (±85 gram emas) dan telah haul (1 tahun hijriah).</p>
+</div></div>
+</div>
+
+<div id="bukti" class="card mt-5 p-6 border-2 border-car hidden max-w-lg mx-auto">
+<div class="text-center"><div class="text-4xl">✅</div><h3 class="ttl font-bold text-lg">Bukti Transaksi Simulasi Berhasil</h3></div>
+<dl id="buktiIsi" class="text-sm mt-3 divide-y divide-gold"></dl>
+<p class="text-[11px] text-center mt-3 text-brown/70">Bukti ini hanya simulasi tugas kuliah, tidak ada transaksi nyata.</p>
+</div>
+</section>
+
+<!-- ================= LAPORAN ================= -->
+<section id="laporan" class="page hidden">
+<h2 class="ttl text-3xl font-bold orn">Laporan Transparansi</h2>
+
+<h3 class="ttl text-xl font-bold mt-5">A. Ringkasan per Akad</h3>
+<div class="grid sm:grid-cols-3 gap-4 mt-3">
+<div class="card p-4 border-t-4 border-t-car"><p class="text-xs text-car">Zakat Maal</p><p class="ttl text-xl font-bold">Rp4.800.000</p></div>
+<div class="card p-4 border-t-4 border-t-tan"><p class="text-xs text-car">Infaq/Sedekah</p><p class="ttl text-xl font-bold">Rp3.200.000</p></div>
+<div class="card p-4 border-t-4 border-t-brown"><p class="text-xs text-car">Total Terhimpun</p><p class="ttl text-xl font-bold">Rp8.000.000</p></div>
+</div>
+
+<h3 class="ttl text-xl font-bold mt-8">B. Arus Kas &amp; Alokasi Dana</h3>
+<div class="card mt-3 overflow-x-auto"><table class="w-full text-sm">
+<thead class="bg-esp text-cream"><tr><th class="p-3">Alokasi</th><th class="p-3">Sumber</th><th class="p-3">Perhitungan</th><th class="p-3 text-right">Nominal</th></tr></thead>
+<tbody class="divide-y divide-gold">
+<tr><td class="p-3">Santunan Tunai Zakat</td><td class="p-3">Zakat</td><td class="p-3">12 mustahik × Rp360.000</td><td class="p-3 text-right">Rp4.320.000</td></tr>
+<tr><td class="p-3">Hak Amil Zakat (10%)</td><td class="p-3">Zakat</td><td class="p-3">Rp4.800.000 × 10%</td><td class="p-3 text-right">Rp480.000</td></tr>
+<tr class="bg-gold/30 font-semibold"><td class="p-3" colspan="3">Subtotal Zakat (Rp4.320.000 + Rp480.000)</td><td class="p-3 text-right">Rp4.800.000</td></tr>
+<tr><td class="p-3">Paket Sembako</td><td class="p-3">Infaq</td><td class="p-3">20 paket × Rp110.000</td><td class="p-3 text-right">Rp2.200.000</td></tr>
+<tr><td class="p-3">Biaya Operasional &amp; Kemasan</td><td class="p-3">Infaq</td><td class="p-3">Pengemasan, transport, konsumsi</td><td class="p-3 text-right">Rp200.000</td></tr>
+<tr><td class="p-3">Sisa Kas Siap Salur Tahap II</td><td class="p-3">Infaq</td><td class="p-3">Saldo program berikutnya</td><td class="p-3 text-right">Rp800.000</td></tr>
+<tr class="bg-gold/30 font-semibold"><td class="p-3" colspan="3">Subtotal Infaq/Sedekah (Rp2.200.000 + Rp200.000 + Rp800.000)</td><td class="p-3 text-right">Rp3.200.000</td></tr>
+<tr class="bg-esp text-cream font-bold"><td class="p-3" colspan="3">TOTAL (Seimbang / Balance)</td><td class="p-3 text-right">Rp8.000.000</td></tr>
+</tbody></table></div>
+<p class="text-xs mt-2 text-brown/80">Dana tersalur ke mustahik = Rp4.320.000 + Rp2.200.000 = Rp6.520.000. Hak amil dihitung hanya dari dana zakat, bukan dari total dana.</p>
+
+<h3 class="ttl text-xl font-bold mt-8">C. Mutasi Transaksi Masuk</h3>
+<div class="card mt-3 overflow-x-auto"><table class="w-full text-sm">
+<thead class="bg-esp text-cream"><tr><th class="p-3">Tanggal</th><th class="p-3">Donatur</th><th class="p-3">Akad</th><th class="p-3 text-right">Nominal</th></tr></thead>
+<tbody id="mutasi" class="divide-y divide-gold"></tbody></table></div>
+
+<h3 class="ttl text-xl font-bold mt-8">D. Hasil Pemeriksaan Pengawasan Syariah (DPS &amp; Audit Internal)</h3>
+<div class="card mt-3 p-5 border-l-8 border-l-car">
+<ul id="dps" class="space-y-3 text-sm"></ul>
+<div class="mt-4 bg-esp text-cream rounded-xl p-4 text-center"><p class="text-xs text-gold">Status Akhir</p><p class="ttl text-lg font-bold">✔ Wajar &amp; Sesuai Prinsip Syariah</p></div>
+</div>
+</section>
+
+<!-- ================= GALERI ================= -->
+<section id="galeri" class="page hidden">
+<div class="flex flex-wrap justify-between items-end gap-2">
+<h2 class="ttl text-3xl font-bold orn">Galeri Dokumentasi</h2>
+<button id="resetGal" class="text-xs border border-car text-car px-3 py-1 rounded-full hover:bg-car hover:text-white">Kembalikan Keterangan Awal</button>
+</div>
+<!-- GAMBAR GALERI: ganti elemen class="gimg" dengan <img src="foto.jpg" class="w-full h-40 object-cover"> -->
+<div id="gal" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5"></div>
+</section>
+
+<!-- ================= EVALUASI ================= -->
+<section id="evaluasi" class="page hidden">
+<h2 class="ttl text-3xl font-bold orn">Evaluasi Program</h2>
+<div class="grid md:grid-cols-2 gap-5 mt-5">
+<div class="card p-6">
+<h3 class="ttl font-bold text-lg">Capaian</h3>
+<div class="space-y-3 mt-3 text-sm">
+<div><div class="flex justify-between"><span>Penghimpunan dana</span><b>80%</b></div><div class="h-2.5 bg-gold/50 rounded-full"><div class="bar h-full bg-car rounded-full" data-w="80"></div></div></div>
+<div><div class="flex justify-between"><span>Penyaluran dari dana terhimpun</span><b>81,5%</b></div><div class="h-2.5 bg-gold/50 rounded-full"><div class="bar h-full bg-tan rounded-full" data-w="81.5"></div></div></div>
+<div><div class="flex justify-between"><span>Target penerima (32 mustahik)</span><b>100%</b></div><div class="h-2.5 bg-gold/50 rounded-full"><div class="bar h-full bg-brown rounded-full" data-w="100"></div></div></div>
+</div>
+<p class="text-sm mt-4"><b>Catatan:</b> target dana belum penuh (kurang Rp2.000.000); perlu perluasan kanal donasi dan relawan pada tahap II.</p>
+</div>
+<div class="card p-6">
+<h3 class="ttl font-bold text-lg">Beri Penilaian</h3>
+<div id="star" class="text-3xl text-gold cursor-pointer select-none mt-2"></div>
+<textarea id="saran" rows="3" placeholder="Saran untuk GKN Care..." class="inp mt-3"></textarea>
+<button id="kirimEv" class="mt-3 bg-esp text-cream px-5 py-2 rounded-full text-sm font-semibold hover:bg-brown">Kirim</button>
+<p id="evOk" class="text-sm mt-2 text-car font-semibold"></p>
+</div></div>
+</section>
+</main>
+
+<footer class="bg-esp text-gold text-center text-sm py-6 px-4 border-t-4 border-car">
+<div class="flex justify-center"><img src="logo%20gema%20kebaikan%20nusantara.png" alt="Logo GKN Care" class="h-12 w-auto rounded-md bg-white p-1"></div>
+<p class="ttl font-bold text-cream mt-2">Gema Kebaikan Nusantara (GKN Care)</p>
+<p class="italic">Menebar Manfaat, Menggemakan Kepedulian untuk Nusantara.</p>
+<p class="text-xs mt-2">© 2026 Simulasi Tugas Kuliah</p>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s), rp=n=>'Rp'+Number(n).toLocaleString('id-ID');
+const menu=['Beranda','Profil','Program','Donasi','Laporan','Galeri','Evaluasi'];
+
+/* ===== SPA ===== */
+['#nav','#mnav','#snav'].forEach(id=>$(id).innerHTML=menu.map(m=>`<a href="#" data-go="${m.toLowerCase()}" class="nav-a px-3 py-2 rounded-full hover:bg-gold/50">${m}</a>`).join(''));
+function show(id){
+  $$('.page').forEach(p=>p.classList.toggle('hidden',p.id!==id));
+  $$('.nav-a').forEach(a=>a.classList.toggle('active',a.dataset.go===id));
+  $('#mnav').classList.add('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+  $$('#'+id+' .bar').forEach(b=>{b.style.width=0;setTimeout(()=>b.style.width=b.dataset.w+'%',60)});
+}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-go]');if(a){e.preventDefault();show(a.dataset.go)}});
+$('#burger').onclick=()=>$('#mnav').classList.toggle('hidden');
+
+/* ===== Pengurus ===== */
+const pg=[
+['Pendiri & Ketua Umum','Maimunah Nur Azizah (NIM: 24108010033)','Memimpin arah kebijakan lembaga, mengoordinasikan seluruh program penghimpunan dan pendayagunaan, serta bertanggung jawab penuh atas akuntabilitas laporan kepada publik.'],
+['Dewan Pengawas Syariah (DPS) & Audit Internal','Tim Simulasi','Mengawasi kepatuhan penyaluran dana zakat agar tepat sasaran kepada 8 golongan asnaf, memeriksa pemisahan akad, dan mengaudit batas hak amil maksimal 12,5% (1/8).'],
+['Divisi Keuangan & Pencatatan Akad','Tim Simulasi','Memisahkan pembukuan dana Zakat, Infaq/Sedekah, dan kontribusi non-tunai, serta mencatat bukti transaksi, kode setor, dan rekap donatur.'],
+['Divisi Program & Pendayagunaan','Tim Simulasi','Melakukan identifikasi, survei lapangan, dan verifikasi kelayakan mustahik, serta melaksanakan penyaluran bantuan konsumtif maupun modal usaha produktif.'],
+['Divisi Kerelawanan & Edukasi','Tim Simulasi','Mengoordinasikan aksi nyata relawan di lapangan (filantropi tenaga) dan penyelenggaraan kelas pelatihan atau literasi keuangan syariah (filantropi ilmu).'],
+['Divisi Media & Komunikasi','Tim Simulasi','Mengelola kampanye penghimpunan dana digital, publikasi laporan transparansi berkala di website, serta dokumentasi penyaluran bantuan.']];
+$('#pengurus').innerHTML=pg.map((p,i)=>`<div class="card p-5 text-center ${i==0?'sm:col-span-2 lg:col-span-3 border-2 border-car':'border-t-4 border-t-car'}">
+${i==0?'<img src="foto%20maimunah.png" alt="Maimunah Nur Azizah" class="mx-auto h-28 w-28 rounded-full object-cover object-top ring-4 ring-car border-4 border-gold">':'<div class="foto mx-auto h-28 w-28 rounded-full ring-4 ring-car border-4 border-gold bg-gradient-to-br from-cream to-gold flex items-center justify-center text-4xl">👤</div>'}
+<p class="text-xs text-car font-semibold mt-3">${p[0]}</p><p class="ttl font-bold">${p[1]}</p>
+<p class="text-xs mt-2 text-left"><b>Tugas:</b> ${p[2]}</p></div>`).join('');
+
+/* ===== Penerima manfaat ===== */
+const A='Verifikasi melalui rekomendasi Ketua RT 04 Baturetno, kunjungan survei rumah tim, dan wawancara kebutuhan pokok';
+const pn=[['Mbah K***','Lansia sebatang kara / Asnaf Fakir','Santunan tunai Rp360.000',A],['Ibu R***','Kepala keluarga prasejahtera / Asnaf Miskin','Santunan tunai Rp360.000',A],['Pak S***','Buruh harian tidak tetap / Asnaf Miskin','Santunan tunai Rp360.000',A],['Ibu N***','Janda lansia tanpa penghasilan / Asnaf Fakir','Santunan tunai Rp360.000',A],['Mbah W***','Lansia dhuafa, dalam pengasuhan keluarga','Paket sembako Rp110.000','Rekomendasi Ketua RT 04, survei rumah, dan pengecekan kondisi tempat tinggal'],['Mbah P***','Lansia dhuafa, penghasilan tidak tetap','Paket sembako Rp110.000','Rekomendasi Ketua RT 04, survei rumah, dan pengecekan kondisi tempat tinggal'],['Ibu T***','Lansia dhuafa, hidup sendiri','Paket sembako Rp110.000','Rekomendasi Ketua RT 04, survei rumah, dan pengecekan kondisi tempat tinggal'],['Pak M***','Lansia dhuafa, tidak berpenghasilan','Paket sembako Rp110.000','Rekomendasi Ketua RT 04, survei rumah, dan pengecekan kondisi tempat tinggal']];
+$('#penerima').innerHTML=pn.map((r,i)=>`<tr><td class="p-3">${i+1}</td><td class="p-3 font-semibold">${r[0]}</td><td class="p-3">${r[1]}</td><td class="p-3">${r[2]}</td><td class="p-3 text-xs">${r[3]}</td></tr>`).join('')+`<tr class="bg-gold/30"><td class="p-3 text-xs" colspan="5">… dan 24 penerima lainnya dengan kriteria dan jalur verifikasi yang sama. Total: 12 penerima zakat + 20 penerima sembako infaq = 32 mustahik.</td></tr>`;
+
+/* ===== Edukasi akad ===== */
+const ak={Zakat:'Kewajiban harta bagi muslim yang memenuhi syarat, yaitu mencapai <b>nishab</b> dan telah <b>haul</b> (1 tahun). Peruntukannya khusus bagi <b>8 golongan asnaf</b> (fakir, miskin, amil, muallaf, riqab, gharimin, fisabilillah, ibnu sabil).',Infaq:'Pengeluaran harta di luar zakat untuk kebaikan dan kemaslahatan umum. Tidak terikat nishab/haul, dan <b>penggunaannya fleksibel</b> (misalnya sembako, operasional program, fasilitas umum).',Sedekah:'Pemberian sukarela yang <b>cakupannya lebih luas</b>: bisa berupa harta maupun non-harta, seperti tenaga, ilmu, senyum, dan perbuatan baik lainnya.'};
+function tab(k){$('#tabIsi').innerHTML=`<b class="text-car">${k}</b> — ${ak[k]}`;$$('.tb').forEach(b=>b.className='tb px-4 py-1.5 rounded-full border border-car text-sm '+(b.dataset.k==k?'bg-car text-white':''))}
+$('#tabs').innerHTML=Object.keys(ak).map(k=>`<button class="tb" data-k="${k}">${k}</button>`).join('');
+$$('.tb').forEach(b=>b.onclick=()=>tab(b.dataset.k));tab('Zakat');
+
+/* ===== Donasi ===== */
+let akad='Zakat',nom=0,met='QRIS GKN Care';
+const sel=(cls,on)=>cls+(on?' bg-car text-white':'');
+$('#akad').innerHTML=Object.keys(ak).map(a=>`<button data-a="${a}" class="ak px-4 py-2 rounded-full border border-car text-sm ${a=='Zakat'?'bg-car text-white':''}">${a}</button>`).join('');
+$$('.ak').forEach(b=>b.onclick=()=>{akad=b.dataset.a;$$('.ak').forEach(x=>x.classList.remove('bg-car','text-white'));b.classList.add('bg-car','text-white')});
+$('#nom').innerHTML=[25000,50000,110000,360000,500000,1000000].map(n=>`<button data-n="${n}" class="nm border border-gold rounded-lg py-2 text-sm hover:bg-gold/40">${rp(n)}</button>`).join('');
+$$('.nm').forEach(b=>b.onclick=()=>{nom=+b.dataset.n;$('#custom').value='';$$('.nm').forEach(x=>x.classList.remove('bg-car','text-white'));b.classList.add('bg-car','text-white')});
+const mt=['QRIS GKN Care','Transfer Bank Syariah Indonesia (BSI)'];
+$('#metode').innerHTML=mt.map((m,i)=>`<label class="flex items-center gap-2 border border-gold rounded-lg px-3 py-2 text-sm cursor-pointer"><input type="radio" name="met" value="${m}" ${i?'':'checked'} class="accent-[#B4653A]"> ${m}</label>`).join('');
+$('#kirim').onclick=()=>{
+  const v=+$('#custom').value||nom;
+  if(!(v>=1000)){$('#err').textContent='Pilih atau isi nominal minimal Rp1.000.';return}
+  $('#err').textContent='';
+  const m=document.querySelector('input[name=met]:checked').value, d=new Date();
+  const no='GKN-'+d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'-'+Math.random().toString(36).slice(2,8).toUpperCase();
+  const rows=[['Nomor Transaksi',no],['Status','✅ Berhasil'],['Donatur',$('#nama').value.trim()||'Hamba Allah'],['Akad',akad],['Nominal',rp(v)],['Metode Pembayaran',m],['Waktu (Simulasi)',d.toLocaleString('id-ID')+' WIB']];
+  $('#buktiIsi').innerHTML=rows.map(r=>`<div class="flex justify-between gap-3 py-2"><dt class="text-brown/80">${r[0]}</dt><dd class="font-semibold text-right">${r[1]}</dd></div>`).join('');
+  $('#bukti').classList.remove('hidden');$('#bukti').scrollIntoView({behavior:'smooth',block:'center'});
+};
+$('#hitung').onclick=()=>{const h=+$('#harta').value;$('#zk').textContent=h?`Zakat Maal (2,5%): ${rp(Math.round(h*0.025))}`:'Isi jumlah harta terlebih dahulu.'};
+
+/* ===== Laporan ===== */
+const mu=[['02 Nov 2026','H*** A.','Zakat',1500000],['03 Nov 2026','S*** W.','Zakat',1300000],['04 Nov 2026','A*** R.','Zakat',1000000],['05 Nov 2026','Hamba Allah','Zakat',1000000],['06 Nov 2026','R*** P.','Infaq',1000000],['07 Nov 2026','N*** F.','Infaq',750000],['08 Nov 2026','Hamba Allah','Sedekah',500000],['09 Nov 2026','D*** K.','Infaq',450000],['10 Nov 2026','M*** S.','Sedekah',500000]];
+$('#mutasi').innerHTML=mu.map(r=>`<tr><td class="p-3">${r[0]}</td><td class="p-3">${r[1]}</td><td class="p-3">${r[2]}</td><td class="p-3 text-right">${rp(r[3])}</td></tr>`).join('')+`<tr class="bg-esp text-cream font-bold"><td class="p-3" colspan="3">Total Masuk (Zakat Rp4.800.000 + Infaq/Sedekah Rp3.200.000)</td><td class="p-3 text-right">${rp(mu.reduce((s,r)=>s+r[3],0))}</td></tr>`;
+const dp=[['Kepatuhan Asnaf Penerima Zakat','12 penerima zakat terverifikasi sebagai asnaf fakir/miskin melalui survei lapangan dan rekomendasi RT.'],['Pemisahan Akad Zakat & Infaq/Sedekah','Pembukuan dan alokasi dana zakat (Rp4.800.000) dan infaq/sedekah (Rp3.200.000) terpisah, tidak ada percampuran.'],['Kepatuhan Batas Hak Amil','Hak amil 10% (Rp480.000), dihitung dari dana zakat saja, di bawah batas maksimal 12,5%.'],['Kecocokan Bukti Transaksi & Kuitansi Serah Terima','Mutasi donasi masuk dan kuitansi serah terima 32 penerima sesuai dengan catatan penyaluran.']];
+$('#dps').innerHTML=dp.map(x=>`<li class="flex gap-3"><span class="text-car font-bold">✔</span><div><b>${x[0]}</b><br><span class="text-brown/90">${x[1]}</span></div></li>`).join('');
+
+/* ===== Galeri (editable + localStorage) ===== */
+const gd=[['🧺','Pengemasan Sembako','Tim relawan mengemas 20 paket sembako untuk lansia dhuafa.'],['💵','Santunan Tunai','Penyerahan santunan Rp360.000 kepada 12 mustahik.'],['👵','Kunjungan Lansia','Survei dan verifikasi kebutuhan lansia bersama Ketua RT 04.'],['🤝','Relawan GKN','Relawan muda membantu pendataan dan distribusi.'],['📋','Pendataan Mustahik','Pencatatan data penerima dan kuitansi serah terima.']];
+const gf=['pengemasan sembako','santunan tunai','kunjungan lansia','relawan GKN','pendataan mustahik'].map(n=>encodeURI(n+'.jpeg'));
+const KEY='gkn_galeri';let gs;
+try{gs=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+if(!Array.isArray(gs)||gs.length!=gd.length)gs=gd.map(g=>({t:g[1],d:g[2]}));
+const sv=()=>{try{localStorage.setItem(KEY,JSON.stringify(gs))}catch(e){}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function drawGal(edit=-1){
+  $('#gal').innerHTML=gd.map((g,i)=>`<div class="card overflow-hidden">
+<img src="${gf[i]}" alt="${esc(gs[i].t)}" class="gimg h-36 w-full object-cover">
+<div class="p-3 text-sm">${edit==i?`<input id="et" class="inp" value="${esc(gs[i].t)}"><textarea id="ed" rows="3" class="inp mt-2">${esc(gs[i].d)}</textarea>
+<div class="flex gap-2 mt-2"><button data-sv="${i}" class="bg-esp text-cream px-3 py-1 rounded-full text-xs">Simpan</button><button data-cx class="border border-car text-car px-3 py-1 rounded-full text-xs">Batal</button></div>`
+:`<p class="ttl font-bold">${esc(gs[i].t)}</p><p class="text-xs mt-1">${esc(gs[i].d)}</p><button data-ed="${i}" class="mt-2 border border-car text-car px-3 py-1 rounded-full text-xs hover:bg-car hover:text-white">✎ Edit Keterangan</button>`}</div></div>`).join('')}
+$('#gal').onclick=e=>{const b=e.target;
+  if(b.dataset.ed!==undefined)drawGal(+b.dataset.ed);
+  else if(b.dataset.sv!==undefined){gs[+b.dataset.sv]={t:$('#et').value.trim()||'Tanpa judul',d:$('#ed').value.trim()};sv();drawGal()}
+  else if(b.dataset.cx!==undefined)drawGal()};
+$('#resetGal').onclick=()=>{gs=gd.map(g=>({t:g[1],d:g[2]}));sv();drawGal()};
+drawGal();
+
+/* ===== Evaluasi ===== */
+let rate=0;
+function drawStar(){$('#star').innerHTML=[1,2,3,4,5].map(i=>`<span data-i="${i}" class="${i<=rate?'text-car':''}">★</span>`).join('');$$('#star span').forEach(s=>s.onclick=()=>{rate=+s.dataset.i;drawStar()})}drawStar();
+$('#kirimEv').onclick=()=>{$('#evOk').textContent=rate?`Terima kasih! Penilaian ${rate}/5 diterima (simulasi).`:'Pilih bintang terlebih dahulu.'};
+
+show('beranda');
+</script>
+</body>
+</html>
